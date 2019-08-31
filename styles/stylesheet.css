@@ -277,7 +277,7 @@ header .menu-icon {
 .alternate_text_img img {
     position: absolute;
     top: 1em;
-    width: 40%;
+    width: 25%;
 }
 .alternate_text_img section:nth-child(odd) {
     padding-left: 50%;
