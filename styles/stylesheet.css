@@ -269,8 +269,10 @@ header .menu-icon {
 }
 .alternate_text_img section {
     position: relative;
-    min-height: 250px;
+    /*min-height: 250px;*/
     padding: 1em 0;
+    height: 0px;
+    padding-bottom: 35%;
 }
 .alternate_text_img img {
     position: absolute;
