@@ -1,0 +1,105 @@
+/* Layout *****************************************************************/
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    transition-duration: 0.3s;
+}
+.gallery > * {
+    width: 33.333%;
+    align-self: flex-start;
+}
+.gallery img {
+    width: 100%;
+    float: left;
+    position: static;
+    margin: 0;
+    transition-duration: 0.3s;
+}
+.gallery .show_more {
+    flex: none;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    position: absolute;
+    bottom: 0;
+}
+.gallery_slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.gallery_slideshow .left_arrow, .gallery_slideshow .right_arrow, .gallery_slideshow .exit_button {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: rgba(100, 100, 100, 0.8);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.gallery_slideshow .left_arrow, .gallery_slideshow .right_arrow {
+    position: absolute;
+    top: 50%;
+    display: none;
+}
+.left_arrow.active, .right_arrow.active {
+    display: block;
+}
+.gallery_slideshow .left_arrow {
+    left: 5%;
+    background-image: url("../images/icons/icons8-chevron-left-26.png");
+}
+.gallery_slideshow .right_arrow {
+    right: 5%;
+    background-image: url("../images/icons/icons8-chevron-right-26.png");
+}
+.gallery_slideshow .exit_button {
+    position: absolute;
+    top: 5vh;
+    right: 5%;
+    background-image: url("../images/icons/icons8-x-100.png");
+}
+.gallery_slideshow .current_image, .gallery_slideshow .left_image, .gallery_slideshow .right_image {
+    width: 66%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+.gallery_slideshow .current_image {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 100vh rgba(0, 20, 0, 1);
+    left: 0;
+    right: 0;
+}
+.gallery_slideshow .left_image {
+    left: -100%;
+}
+.gallery_slideshow .right_image {
+    right: -100%;
+}
+/* Style *******************************************************************/
+.gallery .show_more {
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 4;
+    color: #fff;
+}
+/*.gallery img:hover {
+    position: relative;
+    width: 200%;
+    margin-left: -50%;
+    margin-top: -50%;
+    margin-right: -50%;
+    margin-bottom: -50%;
+}*/
+/* Debugging */
